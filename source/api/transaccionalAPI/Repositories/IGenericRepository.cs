@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using transaccionalAPI.Models;
 
@@ -21,6 +22,6 @@ namespace transaccionalAPI.Repositories
 
         Task<string> GuardarMovimiento(Movimientos entity);
 
-        List<vmEstadoCuenta> EstadoCuenta(vmEstadoCuenta entity);
+        List<vmEstadoCuenta> EstadoCuenta(DateTime FI, DateTime FF, string Cuenta);
     }
 }

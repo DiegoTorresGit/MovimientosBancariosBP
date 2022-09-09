@@ -140,27 +140,29 @@ namespace transaccionalAPI.Repositories.Implements
                 return null;
             }
         }
-        public List<vmEstadoCuenta> EstadoCuenta(vmEstadoCuenta estadoCuenta)
+        public List<vmEstadoCuenta> EstadoCuenta(DateTime FI, DateTime FF, string Cuenta)
         {
+            FI = FI.AddDays(-1);
+            FF = FF.AddDays(1);
             try
             {
                 var Estado = (from clie in Transaccionales.Cliente
                               join per in Transaccionales.Persona
-on clie.codigo_per equals per.codigo_per
+                              on clie.codigo_per equals per.codigo_per
                               join cue in Transaccionales.Cuenta on clie.codigo_cli equals cue.codigo_cli
                               join tc in Transaccionales.TipoCuenta on cue.codigo_tc equals tc.codigo_tc
                               join mo in Transaccionales.Movimiento on cue.codigo_cue equals mo.codigo_cue
-                              where cue.numero_cue == estadoCuenta.numeroCuenta
+                              where cue.numero_cue == Cuenta & mo.fecha_mov>FI & mo.fecha_mov<FF
                               select new
                               {
                                   mo.fecha_mov,
                                   per.nombre_per,
                                   cue.numero_cue,
                                   tc.cuenta_tc,
-                                  mo.saldo_mov,
+                                  cue.saldo_inicial_cue,
                                   clie.estado_cli,
-                                  mo.valor_mov
-                                 // mo.saldo_mov
+                                  mo.valor_mov,
+                                  mo.saldo_mov
                               }).ToList();
                 List<vmEstadoCuenta> vmEC = new List<vmEstadoCuenta>();
                 foreach (var item in Estado)
@@ -171,12 +173,13 @@ on clie.codigo_per equals per.codigo_per
                     vm.Cliente = item.nombre_per;
                     vm.numeroCuenta = item.numero_cue;
                     vm.tipo = item.cuenta_tc;
-                    vm.saldoInicial = item.saldo_mov;
-                    vm.saldoDisponible = item.valor_mov;
+                    vm.saldoInicial = item.saldo_inicial_cue;
+                    vm.estado = (item.estado_cli==true ? "True": "False");
+                    vm.saldoDisponible = item.saldo_mov;
+                    vm.movimiento = item.valor_mov;
                     vmEC.Add(vm);
                 }
                 return vmEC.ToList();
-                    //return await Transaccionales.Set<TEntity>().FindAsync(id);
             }
             catch (Exception e)
             {

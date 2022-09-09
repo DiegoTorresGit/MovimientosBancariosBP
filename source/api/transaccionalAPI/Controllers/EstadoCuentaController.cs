@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using transaccionalAPI.Models;
@@ -16,20 +17,12 @@ namespace transaccionalAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<vmEstadoCuenta>>> Get()
+        public async Task<ActionResult<IEnumerable<vmEstadoCuenta>>> Get(DateTime FI, DateTime FF, string Cuenta)
         {
             vmEstadoCuenta s = new vmEstadoCuenta();
-            s.numeroCuenta = "478758";
-            tcr.EstadoCuenta(s);
-            return tcr.EstadoCuenta(s);
+            //s.numeroCuenta = Cuenta;
+            //tcr.EstadoCuenta(FF,FF,Cuenta);
+            return tcr.EstadoCuenta(FF, FF, Cuenta);
         }
-
-
-        //[HttpGet]
-        //public async Task<ActionResult> Get(vmEstadoCuenta _movimientos)
-        //{
-        //     tcr.EstadoCuenta(_movimientos);
-        //    return Ok("Consulta exitosa");
-        //}
     }
 }
