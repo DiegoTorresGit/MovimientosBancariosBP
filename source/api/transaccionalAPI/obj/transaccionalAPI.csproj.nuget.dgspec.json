@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diego Torres\\source\\repos\\transaccionalAPI\\transaccionalAPI.csproj": {}
+    "C:\\Users\\Diego Torres\\OneDrive\\Documents\\repoGit\\source\\api\\transaccionalAPI\\transaccionalAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diego Torres\\source\\repos\\transaccionalAPI\\transaccionalAPI.csproj": {
+    "C:\\Users\\Diego Torres\\OneDrive\\Documents\\repoGit\\source\\api\\transaccionalAPI\\transaccionalAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diego Torres\\source\\repos\\transaccionalAPI\\transaccionalAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Diego Torres\\OneDrive\\Documents\\repoGit\\source\\api\\transaccionalAPI\\transaccionalAPI.csproj",
         "projectName": "transaccionalAPI",
-        "projectPath": "C:\\Users\\Diego Torres\\source\\repos\\transaccionalAPI\\transaccionalAPI.csproj",
+        "projectPath": "C:\\Users\\Diego Torres\\OneDrive\\Documents\\repoGit\\source\\api\\transaccionalAPI\\transaccionalAPI.csproj",
         "packagesPath": "C:\\Users\\Diego Torres\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diego Torres\\source\\repos\\transaccionalAPI\\obj\\",
+        "outputPath": "C:\\Users\\Diego Torres\\OneDrive\\Documents\\repoGit\\source\\api\\transaccionalAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Diego Torres\\AppData\\Roaming\\NuGet\\NuGet.Config",

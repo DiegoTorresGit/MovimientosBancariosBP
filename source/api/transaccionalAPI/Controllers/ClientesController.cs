@@ -6,13 +6,18 @@ using transaccionalAPI.Models;
 
 namespace transaccionalAPI.Controllers
 {
+    /// <summary>
+    /// Controlador de clientes
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
+
     public class ClientesController : ControllerBase
     {
         private readonly Repositories.IClienteRepository tcr;
         public ClientesController(Repositories.IClienteRepository context)
         {
+            
             tcr = context;
         }
         [HttpGet]

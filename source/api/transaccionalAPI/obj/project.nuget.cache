@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TwHHGnX6kXdlcVMGB8LPxx5XXFFRg2ix37kCFXzEXSBzi+FDp7sMD1MmT1v/GNtgfbdU5Wn0dcQetyqeKAgbDw==",
+  "dgSpecHash": "VPMcBqV/i+3VGQG+V2+5aaqK7yTAxPkg99x5XM2jZA0Mwb9VLSDvln7s4CfxH6/ZL8DhQrQ46I/BWRWY42GYWw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Diego Torres\\source\\repos\\transaccionalAPI\\transaccionalAPI.csproj",
+  "projectFilePath": "C:\\Users\\Diego Torres\\OneDrive\\Documents\\repoGit\\source\\api\\transaccionalAPI\\transaccionalAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Diego Torres\\.nuget\\packages\\ef.core.repository\\1.0.0.2\\ef.core.repository.1.0.0.2.nupkg.sha512",
     "C:\\Users\\Diego Torres\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
